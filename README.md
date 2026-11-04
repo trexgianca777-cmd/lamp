@@ -27,10 +27,10 @@ card: plain meaning, action, original wording, quoted trace.
 
 Deploy paths:
 
-- GitHub Pages: publish this directory. The sample buttons and
-  pre-generated panels work with no server and no keys.
-- Live mode: `python3 server.py` (vault-loaded shell) enables paste,
-  PDF drop, and full-document runs through the swarm.
+- Live mode (the only mode that verifies): `python3 server.py`
+  (vault-loaded shell) enables paste, PDF drop, and full-document runs
+  through the swarm. A static host alone cannot verify.
+- GitHub Pages serves the UI only. Lamps need the live server.
 
 Headings use Beata LP (LetterPerfect) via the hosted embed link in
 `index.html`. Beata LP is a commercial font ($39, LetterPerfect); the
@@ -63,12 +63,9 @@ python3 run_document.py --doc <txt> --out <panel.json> [--party landlord]
   (vendored Mozilla pdf.js 3.11.174; PDF text is extracted in the page,
   the file itself never uploads)
 - `prompts/strict.txt`, `prompts/generous.txt`, `prompts/adjudicator.txt`
-- `samples/lease.txt`, `samples/terms.txt`, `samples/ticket.txt` and
-  matching `.pdf` files (LibreOffice-generated, text layer verified with
-  pdftotext). All samples are synthetic and labeled as such.
-- `samples/panel-lease.json`, `panel-terms.json`, `panel-ticket.json`
-  (pre-generated with the final prompts)
-- `trials/` — trial runs, grades, and the fixes they caused
+- `samples/` and `panels/` — removed 2026-11-04. No sample documents,
+  no pre-generated panels in the app. Verification is live only.
+  Past trial panels are recorded in `trials/` as dev history.
 - `DEMO.md` — 90-second demo script
 
 ## Verified panel counts (final prompts, live runs)

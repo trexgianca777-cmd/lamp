@@ -86,19 +86,6 @@ function showDetail(r) {
 
 function setProgress(msg) { $('progress').textContent = msg; }
 
-async function loadDemo(name) {
-  setProgress('Loading the sample…');
-  try {
-    const text = await (await fetch(`samples/${name}.txt`)).text();
-    $('paste').value = text;
-    const panel = await (await fetch(`panels/${name}.json`)).json();
-    render(text, panel);
-    setProgress('');
-  } catch (e) {
-    setProgress('Could not load that sample. Check the server is running.');
-  }
-}
-
 async function runLive() {
   const text = $('paste').value.trim();
   if (!text) { setProgress('Paste text or drop a PDF first.'); return; }
@@ -114,7 +101,7 @@ async function runLive() {
     render(text, panel);
     setProgress('');
   } catch (e) {
-    setProgress('Live server unreachable. Start it: python3 server.py (vault-loaded shell), or use a sample above.');
+    setProgress('Live server unreachable. Start it: python3 server.py (vault-loaded shell), then retry. There is no sample fallback: verification is live only.');
   }
 }
 
@@ -142,8 +129,6 @@ async function handlePdf(file) {
 }
 
 $('run').onclick = runLive;
-document.querySelectorAll('[data-demo]').forEach(b =>
-  b.onclick = () => loadDemo(b.dataset.demo));
 $('file').onchange = e => { if (e.target.files[0]) handlePdf(e.target.files[0]); };
 const dropZone = document.querySelector('.filebtn');
 dropZone.ondragover = e => e.preventDefault();
@@ -154,5 +139,3 @@ dropZone.ondrop = e => {
 if (window.pdfjsLib) {
   pdfjsLib.GlobalWorkerOptions.workerSrc = 'assets/pdf.worker.min.js';
 }
-/* First paint is already lit: lease sample, pre-generated panel. */
-loadDemo('lease');

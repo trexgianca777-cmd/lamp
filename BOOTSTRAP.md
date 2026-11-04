@@ -5,11 +5,12 @@ document or drop in a full PDF. Every clause gets a lamp: red costs you,
 amber watch it, green standard, white unclear. Click a highlight to see
 its plain meaning, one action, and quoted wording from the document.
 
-## Run the demo (no keys, no server)
+## Run the app (live only)
 
-Open `index.html` in a browser, or serve this directory with any static
-server. The three sample buttons load pre-generated panels from
-`panels/`. No live calls happen in this mode.
+There is no sample mode and no pre-generated fallback. Paste a real
+document or drop a real PDF, and the lamps come from a live run.
+Open `index.html` served by `server.py` (below); a static host alone
+cannot verify, because verification needs the swarm backend.
 
 ## Run it live (needs the swarm)
 

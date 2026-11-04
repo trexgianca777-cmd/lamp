@@ -28,9 +28,6 @@
   <label class="filebtn">Drop a PDF here or choose one
     <input type="file" id="file" accept=".pdf" hidden>
   </label>
-  <button data-demo="lease">Try: lease</button>
-  <button data-demo="terms">Try: terms</button>
-  <button data-demo="ticket">Try: ticket</button>
 </div>
 
 <textarea id="paste" rows="3" placeholder="Or paste the document text here, then press Run."></textarea>
@@ -40,16 +37,18 @@
 </div>
 
 <main>
-  <article id="doc" class="doc" aria-label="Document with highlights"></article>
+  <article id="doc" class="doc" aria-label="Document with highlights">
+    <p class="note">No document loaded. Paste text or drop a PDF. No samples: every lamp comes from a live run on your document.</p>
+  </article>
   <aside id="detail" class="detail" aria-label="Selected clause detail">
-    <p class="detail-empty">Select any highlighted clause to see its plain meaning and the one action to take.</p>
+    <p class="detail-empty">Run a document to see lamps here, then select any highlighted clause.</p>
   </aside>
 </main>
 
 <footer>
   Backend: Groq gpt-oss-20b, $0 free tier. No Meta model used: no Meta key on disk.
-  Sample documents are synthetic and labeled. Scanned image PDFs have no readable text;
-  paste the text instead. Every lamp traces to quoted wording from your document.
+  Scanned image PDFs have no readable text; paste the text instead.
+  Every lamp traces to quoted wording from your document.
   Not legal advice. Headings set in Beata LP (LetterPerfect); body text stays in a
   plain legible face on purpose.
 </footer>
