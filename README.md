@@ -18,12 +18,16 @@ with lamps aggregated into the panel.
 
 ## The app (new)
 
-`index.html` + `styles.css` + `app.js` is the demo app. Document on the
-left with inline highlights in lamp colors, each clause marked with its
-symbol (▲ red, ◆ amber, ● green, ○ white). Threat badge on top: HIGH
-if any red, ELEVATED if any amber and no red, UNCLEAR if any white and
-no red or amber, CLEAR if all green. Click a highlight for the detail
-card: plain meaning, action, original wording, quoted trace.
+`index.html` + `styles.css` + `app.js` is the demo app, built for a
+total non-technical user. One big drop zone, one big "Check my
+document" button, plain words everywhere. Document on the left; only
+problem parts get highlighted (▲ bad, ◆ careful, ○ not sure), fine
+parts stay plain text. Threat badge on top in plain words: "Bad parts
+found", "Some parts need care", "Some parts unclear", "Looks fine".
+Click a highlight for the detail card: what it means, what to do, and
+the original words hidden behind one tap. No jargon anywhere in the UI:
+no clause, verdict, backend, or server talk. The footer is one line:
+checked by computer, not a lawyer.
 
 Deploy paths:
 

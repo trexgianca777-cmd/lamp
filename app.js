@@ -2,10 +2,10 @@
    Detail card on the right. No framework, no build step. */
 const $ = id => document.getElementById(id);
 const LAMPS = {
-  red:   { sym: '▲', label: 'Costs you' },
-  amber: { sym: '◆', label: 'Watch it' },
-  green: { sym: '●', label: 'Standard' },
-  white: { sym: '○', label: 'Needs a human look' },
+  red:   { sym: '▲', label: 'Bad part' },
+  amber: { sym: '◆', label: 'Careful part' },
+  green: { sym: '●', label: 'Fine part' },
+  white: { sym: '○', label: 'Not sure part' },
 };
 const esc = s => (s || '').replace(/[&<>"]/g, c =>
   ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
@@ -27,19 +27,26 @@ function splitClauses(text) {
 
 function threat(panel) {
   const c = panel.counts;
-  if (c.red > 0) return { word: 'THREAT: HIGH', lamp: 'red' };
-  if (c.amber > 0) return { word: 'THREAT: ELEVATED', lamp: 'amber' };
-  if (c.white > 0) return { word: 'THREAT: UNCLEAR', lamp: 'white' };
-  return { word: 'THREAT: CLEAR', lamp: 'green' };
+  if (c.red > 0) return { word: 'Bad parts found', lamp: 'red' };
+  if (c.amber > 0) return { word: 'Some parts need care', lamp: 'amber' };
+  if (c.white > 0) return { word: 'Some parts unclear', lamp: 'white' };
+  return { word: 'Looks fine', lamp: 'green' };
+}
+
+function countLine(panel) {
+  const c = panel.counts, parts = [];
+  if (c.red) parts.push(`${c.red} bad`);
+  if (c.amber) parts.push(`${c.amber} careful`);
+  if (c.white) parts.push(`${c.white} not sure`);
+  if (c.green) parts.push(`${c.green} fine`);
+  return parts.join(' · ') + ` · ${panel.total} parts total`;
 }
 
 function render(text, panel) {
   const t = threat(panel);
   $('threat').innerHTML =
     `<span class="dot ${t.lamp}"></span>${t.word}` +
-    `<small>${panel.counts.red} red · ${panel.counts.amber} amber · ` +
-    `${panel.counts.white} white · ${panel.counts.green} green · ` +
-    `${panel.total} clauses</small>`;
+    `<small>${countLine(panel)}</small>`;
   const { paras, clauses } = splitClauses(text);
   const byIndex = {};
   for (const r of panel.rows) byIndex[r.index] = r;
@@ -50,7 +57,8 @@ function render(text, panel) {
     if (p.length < 40) return `<p>${esc(p)}</p>`;
     clausePos += 1;
     const row = byIndex[clausePos];
-    if (!row) return `<p>${esc(p)}</p>`;
+    /* Only problems get highlighted. Fine parts stay plain text. */
+    if (!row || row.lamp === 'green') return `<p>${esc(p)}</p>`;
     const L = LAMPS[row.lamp];
     return `<p><mark class="${row.lamp}" data-index="${row.index}">` +
       `<span class="sym ${row.lamp}">${L.sym}</span>${esc(p)}</mark></p>`;
@@ -62,13 +70,18 @@ function render(text, panel) {
       showDetail(byIndex[+m.dataset.index]);
     };
   });
-  // Open on the first red clause, else the first row, so the detail card
-  // is never empty on a fresh render.
-  const first = panel.rows.find(r => r.lamp === 'red') || panel.rows[0];
+  /* Open on the first problem, so the detail card is never empty. */
+  const first = panel.rows.find(r => r.lamp === 'red')
+    || panel.rows.find(r => r.lamp === 'amber')
+    || panel.rows.find(r => r.lamp === 'white');
   if (first) {
     const m = $('doc').querySelector(`mark[data-index="${first.index}"]`);
     if (m) m.classList.add('selected');
     showDetail(first);
+  } else {
+    $('detail').innerHTML =
+      `<p class="lamp-line"><span class="dot green"></span>Looks fine</p>` +
+      `<p class="plain">No bad parts found in this document.</p>`;
   }
 }
 
@@ -77,19 +90,21 @@ function showDetail(r) {
   $('detail').innerHTML =
     `<p class="lamp-line"><span class="dot ${r.lamp}"></span>${L.sym} ${L.label.toUpperCase()}</p>` +
     `<p class="plain">${esc(r.plain)}</p>` +
-    (r.action ? `<p class="action">→ ${esc(r.action)}</p>` : '') +
+    (r.action ? `<p class="action">Do this: ${esc(r.action)}</p>` : '') +
+    `<details><summary>Show the original words</summary>` +
     `<p class="orig">${esc(r.clause)}</p>` +
     (r.quote_valid
       ? `<p class="quote">Quoted from your document: <q>${esc(r.quote)}</q></p>`
-      : `<p class="warn">Quote check failed on this clause.</p>`);
+      : `<p class="warn">I could not match the original words for this part.</p>`) +
+    `</details>`;
 }
 
 function setProgress(msg) { $('progress').textContent = msg; }
 
 async function runLive() {
   const text = $('paste').value.trim();
-  if (!text) { setProgress('Paste text or drop a PDF first.'); return; }
-  setProgress('Running the clause verdict unit over every clause…');
+  if (!text) { setProgress('Paste some words or drop a file first.'); return; }
+  setProgress('Checking your document… this can take a minute.');
   try {
     const res = await fetch('/api/document', {
       method: 'POST',
@@ -101,12 +116,12 @@ async function runLive() {
     render(text, panel);
     setProgress('');
   } catch (e) {
-    setProgress('Live server unreachable. Start it: python3 server.py (vault-loaded shell), then retry. There is no sample fallback: verification is live only.');
+    setProgress('Checking is not available right now. Try again in a bit.');
   }
 }
 
 async function handlePdf(file) {
-  setProgress('Extracting text from the PDF in this page…');
+  setProgress('Reading your file…');
   try {
     const buf = await file.arrayBuffer();
     const pdf = await pdfjsLib.getDocument({ data: buf }).promise;
@@ -118,13 +133,13 @@ async function handlePdf(file) {
       text += tc.items.map(it => it.str).join(' ') + '\n\n';
     }
     if (text.trim().length < 40) {
-      setProgress('This PDF is scanned images, no readable text. Paste the text instead.');
+      setProgress('I could not read that file. It might be a photo of pages, not words. Try pasting the words instead.');
       return;
     }
     $('paste').value = text;
     runLive();
   } catch (e) {
-    setProgress('Could not read that PDF. Paste the text instead.');
+    setProgress('I could not open that file. Try pasting the words instead.');
   }
 }
 

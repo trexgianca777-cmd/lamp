@@ -12,45 +12,41 @@
 <header>
   <div>
     <h1>Legal Lights</h1>
-    <p class="tagline">Drop a legal document. Every clause gets a lamp.</p>
+    <p class="tagline">Drop a document. See the bad parts.</p>
   </div>
   <div id="threat" class="threat" aria-live="polite"></div>
 </header>
 
-<div class="legend" aria-label="Lamp meanings">
-  <span><i class="dot red"></i> ▲ Costs you</span>
-  <span><i class="dot amber"></i> ◆ Watch it</span>
-  <span><i class="dot green"></i> ● Standard</span>
-  <span><i class="dot white"></i> ○ Needs a human look</span>
+<div class="legend" aria-label="What the colors mean">
+  <span><i class="dot red"></i> Bad</span>
+  <span><i class="dot amber"></i> Careful</span>
+  <span><i class="dot white"></i> Not sure</span>
+  <span>Everything else is fine.</span>
 </div>
 
 <div class="controls">
-  <label class="filebtn">Drop a PDF here or choose one
+  <label class="filebtn dropzone">Drop your document here, or tap to choose a file
     <input type="file" id="file" accept=".pdf" hidden>
   </label>
 </div>
 
-<textarea id="paste" rows="3" placeholder="Or paste the document text here, then press Run."></textarea>
+<textarea id="paste" rows="3" placeholder="Or paste your document words here."></textarea>
 <div class="controls">
-  <button id="run" class="primary">Run the lights</button>
+  <button id="run" class="primary">Check my document</button>
   <span id="progress" class="progress" aria-live="polite"></span>
 </div>
 
 <main>
   <article id="doc" class="doc" aria-label="Document with highlights">
-    <p class="note">No document loaded. Paste text or drop a PDF. No samples: every lamp comes from a live run on your document.</p>
+    <p class="note">Nothing here yet. Drop a document above, or paste its words below, and press Check my document.</p>
   </article>
-  <aside id="detail" class="detail" aria-label="Selected clause detail">
-    <p class="detail-empty">Run a document to see lamps here, then select any highlighted clause.</p>
+  <aside id="detail" class="detail" aria-label="Selected part detail">
+    <p class="detail-empty">Check a document, then tap a colored part to see what it means and what to do.</p>
   </aside>
 </main>
 
 <footer>
-  Backend: Groq gpt-oss-20b, $0 free tier. No Meta model used: no Meta key on disk.
-  Scanned image PDFs have no readable text; paste the text instead.
-  Every lamp traces to quoted wording from your document.
-  Not legal advice. Headings set in Beata LP (LetterPerfect); body text stays in a
-  plain legible face on purpose.
+  Checked by computer, not a lawyer. Your file stays on your device. Only the words go for checking.
 </footer>
 
 <script src="app.js"></script>
