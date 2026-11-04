@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Legal Lights</title>
+<link href="https://db.onlinewebfonts.com/c/a4a478337a0a8cd33f01b861fcea2a72?family=Beata+LP+W01+Regular" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<script src="assets/pdf.min.js"></script>
+</head>
+<body>
+<header>
+  <div>
+    <h1>Legal Lights</h1>
+    <p class="tagline">Drop a legal document. Every clause gets a lamp.</p>
+  </div>
+  <div id="threat" class="threat" aria-live="polite"></div>
+</header>
+
+<div class="legend" aria-label="Lamp meanings">
+  <span><i class="dot red"></i> ▲ Costs you</span>
+  <span><i class="dot amber"></i> ◆ Watch it</span>
+  <span><i class="dot green"></i> ● Standard</span>
+  <span><i class="dot white"></i> ○ Needs a human look</span>
+</div>
+
+<div class="controls">
+  <label class="filebtn">Drop a PDF here or choose one
+    <input type="file" id="file" accept=".pdf" hidden>
+  </label>
+  <button data-demo="lease">Try: lease</button>
+  <button data-demo="terms">Try: terms</button>
+  <button data-demo="ticket">Try: ticket</button>
+</div>
+
+<textarea id="paste" rows="3" placeholder="Or paste the document text here, then press Run."></textarea>
+<div class="controls">
+  <button id="run" class="primary">Run the lights</button>
+  <span id="progress" class="progress" aria-live="polite"></span>
+</div>
+
+<main>
+  <article id="doc" class="doc" aria-label="Document with highlights"></article>
+  <aside id="detail" class="detail" aria-label="Selected clause detail">
+    <p class="detail-empty">Select any highlighted clause to see its plain meaning and the one action to take.</p>
+  </aside>
+</main>
+
+<footer>
+  Backend: Groq gpt-oss-20b, $0 free tier. No Meta model used: no Meta key on disk.
+  Sample documents are synthetic and labeled. Scanned image PDFs have no readable text;
+  paste the text instead. Every lamp traces to quoted wording from your document.
+  Not legal advice. Headings set in Beata LP (LetterPerfect); body text stays in a
+  plain legible face on purpose.
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>

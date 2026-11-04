@@ -1,0 +1,25 @@
+{
+  "clause": "Tenant must keep the yard mowed and gutters clear; failure is a lease violation.",
+  "strict": {
+    "flag": true,
+    "reason": "Failure to maintain the yard and gutters could trigger a lease violation, potentially leading to fines, penalties, or eviction."
+  },
+  "generous": {
+    "flag": true,
+    "reason": "The clause imposes a direct cost on the tenant by requiring them to maintain the yard and gutters, which typically involves time and money."
+  },
+  "adjudicator": {
+    "plain": "The tenant is required to keep the yard mowed and gutters clear, otherwise it constitutes a lease violation.",
+    "action": "Ensure the yard is mowed and gutters are clear each week.",
+    "quote": "Tenant must keep the yard mowed and gutters clear; failure is a lease violation.",
+    "unjudgeable": false
+  },
+  "lamp": "red",
+  "plain": "The tenant is required to keep the yard mowed and gutters clear, otherwise it constitutes a lease violation.",
+  "action": "Ensure the yard is mowed and gutters are clear each week.",
+  "quote": "Tenant must keep the yard mowed and gutters clear; failure is a lease violation.",
+  "quote_valid": true,
+  "backend": "groq:openai/gpt-oss-20b",
+  "meta_used": false,
+  "cost": 0.0
+}

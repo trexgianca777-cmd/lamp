@@ -1,0 +1,245 @@
+[
+  {
+    "clause": "Landlord may increase monthly rent upon thirty (30) days' written notice, with no cap stated in this agreement.",
+    "strict": {
+      "flag": true,
+      "reason": "The clause allows unlimited rent increases, potentially costing the reader money."
+    },
+    "generous": {
+      "flag": true,
+      "reason": "The clause allows the landlord to raise the rent without any cap, directly increasing the tenant\u2019s monthly payment."
+    },
+    "adjudicator": {
+      "plain": "The clause permits the landlord to raise the rent at any time, provided they give thirty (30) days' written notice, and there is no limit on how much the rent can increase.",
+      "action": "Request the landlord to provide the written notice of the rent increase and verify the amount and effective date.",
+      "quote": "Landlord may increase monthly rent upon thirty (30) days' written notice, with no cap stated in this agreement.",
+      "unjudgeable": false
+    },
+    "lamp": "red",
+    "plain": "The clause permits the landlord to raise the rent at any time, provided they give thirty (30) days' written notice, and there is no limit on how much the rent can increase.",
+    "action": "Request the landlord to provide the written notice of the rent increase and verify the amount and effective date.",
+    "quote": "Landlord may increase monthly rent upon thirty (30) days' written notice, with no cap stated in this agreement.",
+    "quote_valid": true,
+    "backend": "groq:openai/gpt-oss-20b",
+    "meta_used": false,
+    "cost": 0.0,
+    "doc": "lease",
+    "clause_index": 0
+  },
+  {
+    "clause": "This lease renews automatically for twelve (12) months unless Tenant gives ninety (90) days' written notice before expiry.",
+    "strict": {
+      "flag": true,
+      "reason": "The automatic renewal clause could impose unexpected financial obligations or loss of control if the tenant fails to provide notice, even in an edge case."
+    },
+    "generous": {
+      "flag": false,
+      "reason": "The clause merely sets a renewal condition and does not directly impose a cost, loss of rights, or personal data requirement on the tenant."
+    },
+    "adjudicator": {
+      "plain": "The lease will automatically renew for a twelve\u2011month period unless the tenant provides written notice at least ninety days before the lease expires.",
+      "action": "Provide written notice to the landlord at least ninety days before the lease expiration date to prevent automatic renewal.",
+      "quote": "This lease renews automatically for twelve (12) months unless Tenant gives ninety (90) days' written notice before expiry.",
+      "unjudgeable": false
+    },
+    "lamp": "amber",
+    "plain": "The lease will automatically renew for a twelve\u2011month period unless the tenant provides written notice at least ninety days before the lease expires.",
+    "action": "Provide written notice to the landlord at least ninety days before the lease expiration date to prevent automatic renewal.",
+    "quote": "This lease renews automatically for twelve (12) months unless Tenant gives ninety (90) days' written notice before expiry.",
+    "quote_valid": true,
+    "backend": "groq:openai/gpt-oss-20b",
+    "meta_used": false,
+    "cost": 0.0,
+    "doc": "lease",
+    "clause_index": 1
+  },
+  {
+    "clause": "Tenant must keep the yard mowed and gutters clear; failure is a lease violation.",
+    "strict": {
+      "flag": true,
+      "reason": "Failure to maintain the yard and gutters could trigger a lease violation, potentially leading to fines, penalties, or eviction."
+    },
+    "generous": {
+      "flag": true,
+      "reason": "The clause imposes a direct cost on the tenant by requiring them to maintain the yard and gutters, which typically involves time and money."
+    },
+    "adjudicator": {
+      "plain": "The tenant is required to keep the yard mowed and gutters clear, otherwise it constitutes a lease violation.",
+      "action": "Ensure the yard is mowed and gutters are clear each week.",
+      "quote": "Tenant must keep the yard mowed and gutters clear; failure is a lease violation.",
+      "unjudgeable": false
+    },
+    "lamp": "red",
+    "plain": "The tenant is required to keep the yard mowed and gutters clear, otherwise it constitutes a lease violation.",
+    "action": "Ensure the yard is mowed and gutters are clear each week.",
+    "quote": "Tenant must keep the yard mowed and gutters clear; failure is a lease violation.",
+    "quote_valid": true,
+    "backend": "groq:openai/gpt-oss-20b",
+    "meta_used": false,
+    "cost": 0.0,
+    "doc": "lease",
+    "clause_index": 2
+  },
+  {
+    "clause": "We may change these terms at any time; continued use after changes means you accept them.",
+    "strict": {
+      "flag": true,
+      "reason": "The clause allows the provider to unilaterally change terms, and continued use may bind the user to new terms that could impose costs, limit rights, or affect personal data, even if the user is unaware."
+    },
+    "generous": {
+      "flag": false,
+      "reason": "The clause merely states that terms may change and continued use implies acceptance, which is standard and does not directly impose costs or obligations on the reader."
+    },
+    "adjudicator": {
+      "plain": "The clause states that the provider can modify the terms at any time, and if you keep using the service after such changes, you are deemed to have accepted the new terms.",
+      "action": "Continue using the service to accept the updated terms.",
+      "quote": "We may change these terms at any time; continued use after changes means you accept them.",
+      "unjudgeable": false
+    },
+    "lamp": "amber",
+    "plain": "The clause states that the provider can modify the terms at any time, and if you keep using the service after such changes, you are deemed to have accepted the new terms.",
+    "action": "Continue using the service to accept the updated terms.",
+    "quote": "We may change these terms at any time; continued use after changes means you accept them.",
+    "quote_valid": true,
+    "backend": "groq:openai/gpt-oss-20b",
+    "meta_used": false,
+    "cost": 0.0,
+    "doc": "terms",
+    "clause_index": 0
+  },
+  {
+    "clause": "You may cancel anytime from Settings, then Billing, then Cancel, effective at the end of your billing period.",
+    "strict": {
+      "flag": false,
+      "reason": "The clause simply allows the user to cancel the service at any time, which is a standard and harmless provision."
+    },
+    "generous": {
+      "flag": false,
+      "reason": "The clause simply allows cancellation at any time without any cost or restriction."
+    },
+    "adjudicator": {
+      "plain": "The clause states that the user can terminate the service at any time by navigating to Settings, then Billing, then Cancel, with the cancellation taking effect at the end of the current billing period.",
+      "action": "Navigate to Settings \u2192 Billing \u2192 Cancel to terminate the service.",
+      "quote": "You may cancel anytime from Settings, then Billing, then Cancel, effective at the end of your billing period.",
+      "unjudgeable": false
+    },
+    "lamp": "green",
+    "plain": "The clause states that the user can terminate the service at any time by navigating to Settings, then Billing, then Cancel, with the cancellation taking effect at the end of the current billing period.",
+    "action": "Navigate to Settings \u2192 Billing \u2192 Cancel to terminate the service.",
+    "quote": "You may cancel anytime from Settings, then Billing, then Cancel, effective at the end of your billing period.",
+    "quote_valid": true,
+    "backend": "groq:openai/gpt-oss-20b",
+    "meta_used": false,
+    "cost": 0.0,
+    "doc": "terms",
+    "clause_index": 1
+  },
+  {
+    "clause": "We share anonymized usage data with analytics partners.",
+    "strict": {
+      "flag": true,
+      "reason": "The clause could potentially expose the reader to privacy risks or data sharing beyond their control, even if the data is anonymized."
+    },
+    "generous": {
+      "flag": false,
+      "reason": "The clause merely states that anonymized usage data will be shared with analytics partners, which does not directly cost the reader money, rights, time, options, or personal data."
+    },
+    "adjudicator": {
+      "plain": "The clause states that anonymized usage data will be shared with analytics partners.",
+      "action": "Ask the company how anonymization is performed and which partners receive the data.",
+      "quote": "We share anonymized usage data with analytics partners.",
+      "unjudgeable": false
+    },
+    "lamp": "amber",
+    "plain": "The clause states that anonymized usage data will be shared with analytics partners.",
+    "action": "Ask the company how anonymization is performed and which partners receive the data.",
+    "quote": "We share anonymized usage data with analytics partners.",
+    "quote_valid": true,
+    "backend": "groq:openai/gpt-oss-20b",
+    "meta_used": false,
+    "cost": 0.0,
+    "doc": "terms",
+    "clause_index": 2
+  },
+  {
+    "clause": "Fine: $75 for expired meter. Pay within 14 days for a $25 reduction.",
+    "strict": {
+      "flag": true,
+      "reason": "The clause imposes a monetary penalty that could cost the reader money if not paid on time."
+    },
+    "generous": {
+      "flag": true,
+      "reason": "The clause imposes a $75 fine for an expired meter, which directly costs the reader money."
+    },
+    "adjudicator": {
+      "plain": "The clause states that a $75 fine will be imposed for an expired meter, and paying within 14 days will reduce the fine to $25.",
+      "action": "Pay the fine within 14 days to receive the $25 reduction.",
+      "quote": "Fine: $75 for expired meter. Pay within 14 days for a $25 reduction.",
+      "unjudgeable": false
+    },
+    "lamp": "red",
+    "plain": "The clause states that a $75 fine will be imposed for an expired meter, and paying within 14 days will reduce the fine to $25.",
+    "action": "Pay the fine within 14 days to receive the $25 reduction.",
+    "quote": "Fine: $75 for expired meter. Pay within 14 days for a $25 reduction.",
+    "quote_valid": true,
+    "backend": "groq:openai/gpt-oss-20b",
+    "meta_used": false,
+    "cost": 0.0,
+    "doc": "ticket",
+    "clause_index": 0
+  },
+  {
+    "clause": "Disputes must be filed within 30 days of the violation date; late disputes are not accepted.",
+    "strict": {
+      "flag": true,
+      "reason": "The clause imposes a strict 30\u2011day filing deadline, which could prevent a reader from seeking relief and potentially cost them money or time if they miss it."
+    },
+    "generous": {
+      "flag": false,
+      "reason": "The clause merely sets a filing deadline and does not impose a direct cost or loss of rights."
+    },
+    "adjudicator": {
+      "plain": "The clause requires that any dispute be filed no later than 30 days after the date of the alleged violation, and disputes filed after that period will be rejected.",
+      "action": "Verify the date of the alleged violation and ensure the dispute is filed within 30 days of that date.",
+      "quote": "Disputes must be filed within 30 days of the violation date; late disputes are not accepted.",
+      "unjudgeable": false
+    },
+    "lamp": "amber",
+    "plain": "The clause requires that any dispute be filed no later than 30 days after the date of the alleged violation, and disputes filed after that period will be rejected.",
+    "action": "Verify the date of the alleged violation and ensure the dispute is filed within 30 days of that date.",
+    "quote": "Disputes must be filed within 30 days of the violation date; late disputes are not accepted.",
+    "quote_valid": true,
+    "backend": "groq:openai/gpt-oss-20b",
+    "meta_used": false,
+    "cost": 0.0,
+    "doc": "ticket",
+    "clause_index": 1
+  },
+  {
+    "clause": "Unpaid fines double after 60 days and may be referred to collections.",
+    "strict": {
+      "flag": true,
+      "reason": "The clause imposes a penalty that increases the amount owed and introduces the possibility of collections, which can lead to additional costs, legal action, and potential damage to credit."
+    },
+    "generous": {
+      "flag": true,
+      "reason": "The clause states that unpaid fines will double after 60 days, directly imposing additional monetary costs on the reader."
+    },
+    "adjudicator": {
+      "plain": "If a fine remains unpaid for more than 60 days, the amount owed will be doubled and the debt may be sent to a collections agency.",
+      "action": "Verify whether you have any unpaid fines that have exceeded 60 days and, if so, calculate the doubled amount and contact the issuer to discuss payment options.",
+      "quote": "Unpaid fines double after 60 days and may be referred to collections.",
+      "unjudgeable": false
+    },
+    "lamp": "red",
+    "plain": "If a fine remains unpaid for more than 60 days, the amount owed will be doubled and the debt may be sent to a collections agency.",
+    "action": "Verify whether you have any unpaid fines that have exceeded 60 days and, if so, calculate the doubled amount and contact the issuer to discuss payment options.",
+    "quote": "Unpaid fines double after 60 days and may be referred to collections.",
+    "quote_valid": true,
+    "backend": "groq:openai/gpt-oss-20b",
+    "meta_used": false,
+    "cost": 0.0,
+    "doc": "ticket",
+    "clause_index": 2
+  }
+]

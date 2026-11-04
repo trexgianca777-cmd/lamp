@@ -1,0 +1,25 @@
+{
+  "clause": "Disputes must be filed within 30 days of the violation date; late disputes are not accepted.",
+  "strict": {
+    "flag": true,
+    "reason": "The clause imposes a strict 30\u2011day filing deadline, which could prevent a reader from seeking relief and potentially cost them money or time if they miss it."
+  },
+  "generous": {
+    "flag": false,
+    "reason": "The clause merely sets a filing deadline and does not impose a direct cost or loss of rights."
+  },
+  "adjudicator": {
+    "plain": "The clause requires that any dispute be filed no later than 30 days after the date of the alleged violation, and disputes filed after that period will be rejected.",
+    "action": "Verify the date of the alleged violation and ensure the dispute is filed within 30 days of that date.",
+    "quote": "Disputes must be filed within 30 days of the violation date; late disputes are not accepted.",
+    "unjudgeable": false
+  },
+  "lamp": "amber",
+  "plain": "The clause requires that any dispute be filed no later than 30 days after the date of the alleged violation, and disputes filed after that period will be rejected.",
+  "action": "Verify the date of the alleged violation and ensure the dispute is filed within 30 days of that date.",
+  "quote": "Disputes must be filed within 30 days of the violation date; late disputes are not accepted.",
+  "quote_valid": true,
+  "backend": "groq:openai/gpt-oss-20b",
+  "meta_used": false,
+  "cost": 0.0
+}

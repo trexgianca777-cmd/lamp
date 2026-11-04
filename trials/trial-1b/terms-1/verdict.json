@@ -1,0 +1,25 @@
+{
+  "clause": "You may cancel anytime from Settings, then Billing, then Cancel, effective at the end of your billing period.",
+  "strict": {
+    "flag": false,
+    "reason": "The clause simply allows the user to cancel the service at any time, which is a standard and harmless provision."
+  },
+  "generous": {
+    "flag": false,
+    "reason": "The clause simply allows cancellation at any time without any cost or restriction."
+  },
+  "adjudicator": {
+    "plain": "The clause states that the user can terminate the service at any time by navigating to Settings, then Billing, then Cancel, with the cancellation taking effect at the end of the current billing period.",
+    "action": "Navigate to Settings \u2192 Billing \u2192 Cancel to terminate the service.",
+    "quote": "You may cancel anytime from Settings, then Billing, then Cancel, effective at the end of your billing period.",
+    "unjudgeable": false
+  },
+  "lamp": "green",
+  "plain": "The clause states that the user can terminate the service at any time by navigating to Settings, then Billing, then Cancel, with the cancellation taking effect at the end of the current billing period.",
+  "action": "Navigate to Settings \u2192 Billing \u2192 Cancel to terminate the service.",
+  "quote": "You may cancel anytime from Settings, then Billing, then Cancel, effective at the end of your billing period.",
+  "quote_valid": true,
+  "backend": "groq:openai/gpt-oss-20b",
+  "meta_used": false,
+  "cost": 0.0
+}

@@ -1,0 +1,8 @@
+__pycache__/
+*.pyc
+samples/panel-*-work/
+trials/**/strict/
+trials/**/generous/
+trials/**/adjudicator/
+trials/debug-*
+trials/smoke

@@ -1,0 +1,25 @@
+{
+  "clause": "Landlord may increase monthly rent upon thirty (30) days' written notice, with no cap stated in this agreement.",
+  "strict": {
+    "flag": true,
+    "reason": "The clause allows unlimited rent increases, potentially costing the tenant money."
+  },
+  "generous": {
+    "flag": true,
+    "reason": "The clause allows the landlord to raise the rent without any cap, directly increasing the reader\u2019s monthly payment."
+  },
+  "adjudicator": {
+    "plain": "The clause allows the landlord to increase the monthly rent after giving thirty days' written notice, with no limit on the amount.",
+    "action": "Ask the landlord to specify a maximum increase or negotiate a cap on rent increases.",
+    "quote": "Landlord may increase monthly rent upon thirty (30) days' written notice, with no cap stated in this agreement.",
+    "unjudgeable": false
+  },
+  "lamp": "red",
+  "plain": "The clause allows the landlord to increase the monthly rent after giving thirty days' written notice, with no limit on the amount.",
+  "action": "Ask the landlord to specify a maximum increase or negotiate a cap on rent increases.",
+  "quote": "Landlord may increase monthly rent upon thirty (30) days' written notice, with no cap stated in this agreement.",
+  "quote_valid": true,
+  "backend": "groq:openai/gpt-oss-20b",
+  "meta_used": false,
+  "cost": 0.0
+}

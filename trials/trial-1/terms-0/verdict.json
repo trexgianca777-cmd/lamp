@@ -1,0 +1,25 @@
+{
+  "clause": "We may change these terms at any time; continued use after changes means you accept them.",
+  "strict": {
+    "flag": true,
+    "reason": "The clause allows the party to unilaterally change terms and requires continued use to accept them, potentially imposing new costs, restrictions, or obligations on the reader."
+  },
+  "generous": {
+    "flag": false,
+    "reason": "The clause merely allows the party to modify terms and requires continued use for acceptance, which is standard and does not directly impose costs or restrict rights."
+  },
+  "adjudicator": {
+    "plain": "The clause states that the party may change the terms at any time and that continued use of the service after changes constitutes acceptance of the new terms.",
+    "action": "Check whether the changes affect your rights or obligations.",
+    "quote": "We may change these terms at any time; continued use after changes means you accept them.",
+    "unjudgeable": false
+  },
+  "lamp": "amber",
+  "plain": "The clause states that the party may change the terms at any time and that continued use of the service after changes constitutes acceptance of the new terms.",
+  "action": "Check whether the changes affect your rights or obligations.",
+  "quote": "We may change these terms at any time; continued use after changes means you accept them.",
+  "quote_valid": true,
+  "backend": "groq:openai/gpt-oss-20b",
+  "meta_used": false,
+  "cost": 0.0
+}

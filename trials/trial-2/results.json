@@ -1,0 +1,110 @@
+[
+  {
+    "clause": "We may change these terms at any time; continued use after changes means you accept them.",
+    "strict": {
+      "flag": true,
+      "reason": "The clause allows the provider to unilaterally change terms, and continued use may bind the user to new terms that could impose costs, limit rights, or affect personal data, even if the user is unaware."
+    },
+    "generous": {
+      "flag": false,
+      "reason": "The clause merely states that terms may change and continued use implies acceptance, which is standard and does not directly impose costs or obligations on the reader."
+    },
+    "adjudicator": {
+      "plain": "The clause states that the provider may alter the terms at any time, and if you continue to use the service after such changes, you are deemed to have accepted the new terms.",
+      "action": "Ask the provider to provide a written notice of the changes and set a deadline of 30 days to review or opt out of the new terms.",
+      "quote": "We may change these terms at any time; continued use after changes means you accept them.",
+      "unjudgeable": false
+    },
+    "lamp": "amber",
+    "plain": "The clause states that the provider may alter the terms at any time, and if you continue to use the service after such changes, you are deemed to have accepted the new terms.",
+    "action": "Ask the provider to provide a written notice of the changes and set a deadline of 30 days to review or opt out of the new terms.",
+    "quote": "We may change these terms at any time; continued use after changes means you accept them.",
+    "quote_valid": true,
+    "backend": "groq:openai/gpt-oss-20b",
+    "meta_used": false,
+    "cost": 0.0,
+    "doc": "terms",
+    "clause_index": 0
+  },
+  {
+    "clause": "Fine: $75 for expired meter. Pay within 14 days for a $25 reduction.",
+    "strict": {
+      "flag": true,
+      "reason": "The clause imposes a monetary penalty that could cost the reader money if not paid on time."
+    },
+    "generous": {
+      "flag": true,
+      "reason": "The clause imposes a $75 fine for an expired meter, which directly costs the reader money."
+    },
+    "adjudicator": {
+      "plain": "The clause states that a $75 fine will be imposed for an expired meter, but if the fine is paid within 14 days a $25 reduction applies.",
+      "action": "Pay the fine within 14 days to receive the $25 reduction.",
+      "quote": "Fine: $75 for expired meter. Pay within 14 days for a $25 reduction.",
+      "unjudgeable": false
+    },
+    "lamp": "red",
+    "plain": "The clause states that a $75 fine will be imposed for an expired meter, but if the fine is paid within 14 days a $25 reduction applies.",
+    "action": "Pay the fine within 14 days to receive the $25 reduction.",
+    "quote": "Fine: $75 for expired meter. Pay within 14 days for a $25 reduction.",
+    "quote_valid": true,
+    "backend": "groq:openai/gpt-oss-20b",
+    "meta_used": false,
+    "cost": 0.0,
+    "doc": "ticket",
+    "clause_index": 0
+  },
+  {
+    "clause": "Landlord may increase monthly rent upon thirty (30) days' written notice, with no cap stated in this agreement.",
+    "strict": {
+      "flag": true,
+      "reason": "The clause allows unlimited rent increases, potentially costing the reader money."
+    },
+    "generous": {
+      "flag": true,
+      "reason": "The clause allows the landlord to raise the rent without any cap, directly increasing the tenant\u2019s monthly payment."
+    },
+    "adjudicator": {
+      "plain": "The clause permits the landlord to raise the monthly rent at any time, provided they give thirty (30) days' written notice, and there is no limit on how high the increase can be.",
+      "action": "Ask the landlord to provide a written notice of the proposed rent increase and request a written explanation of the amount and the basis for the increase before the 30\u2011day period expires.",
+      "quote": "Landlord may increase monthly rent upon thirty (30) days' written notice, with no cap stated in this agreement.",
+      "unjudgeable": false
+    },
+    "lamp": "red",
+    "plain": "The clause permits the landlord to raise the monthly rent at any time, provided they give thirty (30) days' written notice, and there is no limit on how high the increase can be.",
+    "action": "Ask the landlord to provide a written notice of the proposed rent increase and request a written explanation of the amount and the basis for the increase before the 30\u2011day period expires.",
+    "quote": "Landlord may increase monthly rent upon thirty (30) days' written notice, with no cap stated in this agreement.",
+    "quote_valid": true,
+    "backend": "groq:openai/gpt-oss-20b",
+    "meta_used": false,
+    "cost": 0.0,
+    "doc": "lease",
+    "clause_index": 0
+  },
+  {
+    "clause": "We share anonymized usage data with analytics partners.",
+    "strict": {
+      "flag": true,
+      "reason": "The clause could potentially expose the reader to privacy risks or data sharing beyond their control, even if the data is anonymized."
+    },
+    "generous": {
+      "flag": false,
+      "reason": "The clause merely states that anonymized usage data will be shared with analytics partners, which does not directly cost the reader money, rights, time, options, or personal data."
+    },
+    "adjudicator": {
+      "plain": "The clause states that anonymized usage data will be shared with analytics partners.",
+      "action": "Ask the reader if they wish to opt out of having their anonymized usage data shared with analytics partners.",
+      "quote": "We share anonymized usage data with analytics partners.",
+      "unjudgeable": false
+    },
+    "lamp": "amber",
+    "plain": "The clause states that anonymized usage data will be shared with analytics partners.",
+    "action": "Ask the reader if they wish to opt out of having their anonymized usage data shared with analytics partners.",
+    "quote": "We share anonymized usage data with analytics partners.",
+    "quote_valid": true,
+    "backend": "groq:openai/gpt-oss-20b",
+    "meta_used": false,
+    "cost": 0.0,
+    "doc": "terms",
+    "clause_index": 2
+  }
+]

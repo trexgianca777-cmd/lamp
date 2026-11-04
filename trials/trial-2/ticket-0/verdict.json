@@ -1,0 +1,25 @@
+{
+  "clause": "Fine: $75 for expired meter. Pay within 14 days for a $25 reduction.",
+  "strict": {
+    "flag": true,
+    "reason": "The clause imposes a monetary penalty that could cost the reader money if not paid on time."
+  },
+  "generous": {
+    "flag": true,
+    "reason": "The clause imposes a $75 fine for an expired meter, which directly costs the reader money."
+  },
+  "adjudicator": {
+    "plain": "The clause states that a $75 fine will be imposed for an expired meter, but if the fine is paid within 14 days a $25 reduction applies.",
+    "action": "Pay the fine within 14 days to receive the $25 reduction.",
+    "quote": "Fine: $75 for expired meter. Pay within 14 days for a $25 reduction.",
+    "unjudgeable": false
+  },
+  "lamp": "red",
+  "plain": "The clause states that a $75 fine will be imposed for an expired meter, but if the fine is paid within 14 days a $25 reduction applies.",
+  "action": "Pay the fine within 14 days to receive the $25 reduction.",
+  "quote": "Fine: $75 for expired meter. Pay within 14 days for a $25 reduction.",
+  "quote_valid": true,
+  "backend": "groq:openai/gpt-oss-20b",
+  "meta_used": false,
+  "cost": 0.0
+}

@@ -1,0 +1,25 @@
+{
+  "clause": "Unpaid fines double after 60 days and may be referred to collections.",
+  "strict": {
+    "flag": true,
+    "reason": "The clause imposes a penalty that increases the amount owed and introduces the possibility of collections, which can lead to additional costs, legal action, and potential damage to credit."
+  },
+  "generous": {
+    "flag": true,
+    "reason": "The clause states that unpaid fines will double after 60 days, directly imposing additional monetary costs on the reader."
+  },
+  "adjudicator": {
+    "plain": "If a fine remains unpaid for more than 60 days, the amount owed will be doubled and the debt may be sent to a collections agency.",
+    "action": "Verify whether you have any unpaid fines that have exceeded 60 days and, if so, calculate the doubled amount and contact the issuer to discuss payment options.",
+    "quote": "Unpaid fines double after 60 days and may be referred to collections.",
+    "unjudgeable": false
+  },
+  "lamp": "red",
+  "plain": "If a fine remains unpaid for more than 60 days, the amount owed will be doubled and the debt may be sent to a collections agency.",
+  "action": "Verify whether you have any unpaid fines that have exceeded 60 days and, if so, calculate the doubled amount and contact the issuer to discuss payment options.",
+  "quote": "Unpaid fines double after 60 days and may be referred to collections.",
+  "quote_valid": true,
+  "backend": "groq:openai/gpt-oss-20b",
+  "meta_used": false,
+  "cost": 0.0
+}

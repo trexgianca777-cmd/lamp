@@ -1,0 +1,29 @@
+[
+  {
+    "clause": "We share anonymized usage data with analytics partners.",
+    "strict": {
+      "flag": true,
+      "reason": "The clause could potentially expose the reader to privacy risks or data sharing beyond their control, even if the data is anonymized."
+    },
+    "generous": {
+      "flag": false,
+      "reason": "The clause merely states that anonymized usage data will be shared with analytics partners, which does not directly cost the reader money, rights, time, options, or personal data."
+    },
+    "adjudicator": {
+      "plain": "The clause states that anonymized usage data will be shared with analytics partners.",
+      "action": "Ask the company to provide a detailed privacy notice explaining which analytics partners will receive the data and how it will be used, and request an option to opt out of such sharing.",
+      "quote": "We share anonymized usage data with analytics partners.",
+      "unjudgeable": false
+    },
+    "lamp": "amber",
+    "plain": "The clause states that anonymized usage data will be shared with analytics partners.",
+    "action": "Ask the company to provide a detailed privacy notice explaining which analytics partners will receive the data and how it will be used, and request an option to opt out of such sharing.",
+    "quote": "We share anonymized usage data with analytics partners.",
+    "quote_valid": true,
+    "backend": "groq:openai/gpt-oss-20b",
+    "meta_used": false,
+    "cost": 0.0,
+    "doc": "terms",
+    "clause_index": 2
+  }
+]

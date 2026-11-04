@@ -1,0 +1,7 @@
+SYNTHETIC SAMPLE PARKING FINE. Not a real fine. Written for demo purposes only.
+
+Fine: $75 for expired meter. Pay within 14 days for a $25 reduction.
+
+Disputes must be filed within 30 days of the violation date; late disputes are not accepted.
+
+Unpaid fines double after 60 days and may be referred to collections.

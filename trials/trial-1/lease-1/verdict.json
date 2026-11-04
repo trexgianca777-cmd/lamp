@@ -1,0 +1,25 @@
+{
+  "clause": "This lease renews automatically for twelve (12) months unless Tenant gives ninety (90) days' written notice before expiry.",
+  "strict": {
+    "flag": true,
+    "reason": "The clause requires the tenant to actively provide 90\u2011day notice to avoid automatic renewal, which could result in unintended lease extension, additional rent, or loss of the option to terminate, thereby potentially costing the tenant money, time, or rights."
+  },
+  "generous": {
+    "flag": false,
+    "reason": "The clause merely states a standard renewal condition and does not impose a direct cost or restriction on the reader."
+  },
+  "adjudicator": {
+    "plain": "The lease will automatically extend for another twelve months unless the tenant provides written notice at least ninety days before the lease ends.",
+    "action": "If you do not want the lease to renew, submit a written notice at least ninety days before the current lease expires.",
+    "quote": "This lease renews automatically for twelve (12) months unless Tenant gives ninety (90) days' written notice before expiry.",
+    "unjudgeable": false
+  },
+  "lamp": "amber",
+  "plain": "The lease will automatically extend for another twelve months unless the tenant provides written notice at least ninety days before the lease ends.",
+  "action": "If you do not want the lease to renew, submit a written notice at least ninety days before the current lease expires.",
+  "quote": "This lease renews automatically for twelve (12) months unless Tenant gives ninety (90) days' written notice before expiry.",
+  "quote_valid": true,
+  "backend": "groq:openai/gpt-oss-20b",
+  "meta_used": false,
+  "cost": 0.0
+}

@@ -1,0 +1,169 @@
+{
+  "counts": {
+    "red": 2,
+    "amber": 2,
+    "white": 0,
+    "green": 2
+  },
+  "total": 6,
+  "rows": [
+    {
+      "clause": "Accounts inactive for 12 months may be deleted, including stored content, without notice.",
+      "strict": {
+        "flag": true,
+        "reason": "The clause allows deletion of inactive accounts and all stored content without notice, potentially resulting in loss of data and access."
+      },
+      "generous": {
+        "flag": true,
+        "reason": "The clause deletes inactive accounts and stored content without notice, removing the reader's data and access."
+      },
+      "adjudicator": {
+        "plain": "Accounts inactive for 12 months may be deleted, including stored content, without notice.",
+        "action": "Ask the company to provide a written notice at least 30 days before deleting any inactive account and its stored content, or request an opt\u2011out of deletion.",
+        "quote": "Accounts inactive for 12 months may be deleted, including stored content, without notice.",
+        "unjudgeable": false
+      },
+      "lamp": "red",
+      "plain": "Accounts inactive for 12 months may be deleted, including stored content, without notice.",
+      "action": "Ask the company to provide a written notice at least 30 days before deleting any inactive account and its stored content, or request an opt\u2011out of deletion.",
+      "quote": "Accounts inactive for 12 months may be deleted, including stored content, without notice.",
+      "quote_valid": true,
+      "backend": "groq:openai/gpt-oss-20b",
+      "meta_used": false,
+      "cost": 0.0,
+      "index": 3
+    },
+    {
+      "clause": "Refunds are issued at our sole discretion within 14 days of purchase.",
+      "strict": {
+        "flag": true,
+        "reason": "The clause allows the company to refuse a refund at its discretion, potentially costing the reader money, time, and limiting their rights to recover funds."
+      },
+      "generous": {
+        "flag": true,
+        "reason": "The clause limits the reader\u2019s right to a refund by making it subject to the company\u2019s sole discretion, potentially causing the reader to lose money."
+      },
+      "adjudicator": {
+        "plain": "The clause states that refunds will be issued only if the company chooses to do so, and only within 14 days of purchase.",
+        "action": "Ask the company to provide a written statement of its refund criteria and the specific conditions under which it will issue a refund.",
+        "quote": "Refunds are issued at our sole discretion within 14 days of purchase.",
+        "unjudgeable": false
+      },
+      "lamp": "red",
+      "plain": "The clause states that refunds will be issued only if the company chooses to do so, and only within 14 days of purchase.",
+      "action": "Ask the company to provide a written statement of its refund criteria and the specific conditions under which it will issue a refund.",
+      "quote": "Refunds are issued at our sole discretion within 14 days of purchase.",
+      "quote_valid": true,
+      "backend": "groq:openai/gpt-oss-20b",
+      "meta_used": false,
+      "cost": 0.0,
+      "index": 4
+    },
+    {
+      "clause": "We may change these terms at any time; continued use after changes means you accept them.",
+      "strict": {
+        "flag": true,
+        "reason": "The clause allows the provider to unilaterally change terms, and continued use may bind the user to new terms that could impose costs, limit rights, or affect personal data, even if the user is unaware."
+      },
+      "generous": {
+        "flag": false,
+        "reason": "The clause merely states that terms may change and continued use implies acceptance, which is standard and does not directly impose costs or obligations on the reader."
+      },
+      "adjudicator": {
+        "plain": "The clause states that the company may alter the terms at any time and that if you continue to use the service after such changes, you are deemed to have accepted the new terms.",
+        "action": "Ask the company to provide you with a clear notice of any changes and give you a reasonable period to review or opt out before you continue using the service.",
+        "quote": "We may change these terms at any time; continued use after changes means you accept them.",
+        "unjudgeable": false
+      },
+      "lamp": "amber",
+      "plain": "The clause states that the company may alter the terms at any time and that if you continue to use the service after such changes, you are deemed to have accepted the new terms.",
+      "action": "Ask the company to provide you with a clear notice of any changes and give you a reasonable period to review or opt out before you continue using the service.",
+      "quote": "We may change these terms at any time; continued use after changes means you accept them.",
+      "quote_valid": true,
+      "backend": "groq:openai/gpt-oss-20b",
+      "meta_used": false,
+      "cost": 0.0,
+      "index": 0
+    },
+    {
+      "clause": "We share anonymized usage data with analytics partners.",
+      "strict": {
+        "flag": true,
+        "reason": "The clause could potentially expose the reader to privacy risks or data sharing beyond their control, even if the data is anonymized."
+      },
+      "generous": {
+        "flag": false,
+        "reason": "The clause merely states that anonymized usage data will be shared with analytics partners, which does not directly cost the reader money, rights, time, options, or personal data."
+      },
+      "adjudicator": {
+        "plain": "The clause states that anonymized usage data will be shared with analytics partners.",
+        "action": "Ask the company to provide a detailed description of the anonymization methods used, the specific data shared, and the retention period for that data.",
+        "quote": "We share anonymized usage data with analytics partners.",
+        "unjudgeable": false
+      },
+      "lamp": "amber",
+      "plain": "The clause states that anonymized usage data will be shared with analytics partners.",
+      "action": "Ask the company to provide a detailed description of the anonymization methods used, the specific data shared, and the retention period for that data.",
+      "quote": "We share anonymized usage data with analytics partners.",
+      "quote_valid": true,
+      "backend": "groq:openai/gpt-oss-20b",
+      "meta_used": false,
+      "cost": 0.0,
+      "index": 2
+    },
+    {
+      "clause": "You may cancel anytime from Settings, then Billing, then Cancel, effective at the end of your billing period.",
+      "strict": {
+        "flag": false,
+        "reason": "The clause simply allows the user to cancel the service at any time, which is a standard and harmless provision."
+      },
+      "generous": {
+        "flag": false,
+        "reason": "The clause simply allows cancellation at any time without any cost or restriction."
+      },
+      "adjudicator": {
+        "plain": "The clause allows the reader to cancel the service at any time, with the cancellation taking effect at the end of the current billing period.",
+        "action": "Ask the company to confirm the exact date the cancellation will take effect and to provide a written confirmation of the cancellation.",
+        "quote": "You may cancel anytime from Settings, then Billing, then Cancel, effective at the end of your billing period.",
+        "unjudgeable": false
+      },
+      "lamp": "green",
+      "plain": "The clause allows the reader to cancel the service at any time, with the cancellation taking effect at the end of the current billing period.",
+      "action": "Ask the company to confirm the exact date the cancellation will take effect and to provide a written confirmation of the cancellation.",
+      "quote": "You may cancel anytime from Settings, then Billing, then Cancel, effective at the end of your billing period.",
+      "quote_valid": true,
+      "backend": "groq:openai/gpt-oss-20b",
+      "meta_used": false,
+      "cost": 0.0,
+      "index": 1
+    },
+    {
+      "clause": "You must be 18 or older to use this service.",
+      "strict": {
+        "flag": false,
+        "reason": "The clause merely sets an age requirement and does not impose any cost, loss of rights, time commitment, or personal data collection."
+      },
+      "generous": {
+        "flag": false,
+        "reason": "The clause merely sets an age requirement and does not impose any cost, loss of rights, time, options, or personal data collection."
+      },
+      "adjudicator": {
+        "plain": "The clause requires the reader to be at least 18 years old to use the service.",
+        "action": "Ask the company to verify your age before granting access to the service.",
+        "quote": "You must be 18 or older to use this service.",
+        "unjudgeable": false
+      },
+      "lamp": "green",
+      "plain": "The clause requires the reader to be at least 18 years old to use the service.",
+      "action": "Ask the company to verify your age before granting access to the service.",
+      "quote": "You must be 18 or older to use this service.",
+      "quote_valid": true,
+      "backend": "groq:openai/gpt-oss-20b",
+      "meta_used": false,
+      "cost": 0.0,
+      "index": 5
+    }
+  ],
+  "backend": "groq:openai/gpt-oss-20b",
+  "meta_used": false
+}
