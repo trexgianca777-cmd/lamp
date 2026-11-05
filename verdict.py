@@ -74,14 +74,20 @@ def main():
                                      os.path.join(a.out, "strict")))
     generous = extract_json(call_swarm(load_prompt("generous.txt") + clause,
                                        os.path.join(a.out, "generous")))
-    adj_prompt = (load_prompt("adjudicator.txt") + clause +
-                  f"\nThe other party in this document is the {a.party}. " +
-                  f"Address actions to them by that role." +
-                  f"\nStrict reader: {json.dumps(strict)}"
-                  f"\nGenerous reader: {json.dumps(generous)}")
-    adj = extract_json(call_swarm(adj_prompt, os.path.join(a.out, "adjudicator")))
-
     sf, gf = bool(strict.get("flag")), bool(generous.get("flag"))
+    if sf or gf:
+        adj_prompt = (load_prompt("adjudicator.txt") + clause +
+                      f"\nThe other party in this document is the {a.party}. " +
+                      f"Address actions to them by that role." +
+                      f"\nStrict reader: {json.dumps(strict)}"
+                      f"\nGenerous reader: {json.dumps(generous)}")
+        adj = extract_json(call_swarm(adj_prompt,
+                                      os.path.join(a.out, "adjudicator")))
+    else:
+        # Lazy green: both readers clear. No adjudicator call is needed;
+        # green units are shown as counts only, never in detail.
+        adj = {"skipped": True}
+
     if adj.get("unjudgeable"):
         lamp = "white"
     elif sf and gf:
@@ -99,6 +105,7 @@ def main():
         "action": adj.get("action", ""),
         "quote": quote,
         "quote_valid": bool(quote) and quote in clause,
+        "adjudicator_skipped": bool(adj.get("skipped")),
         "backend": f"groq:{MODEL}",
         "meta_used": False,
         "cost": 0.0,

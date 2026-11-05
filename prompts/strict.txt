@@ -1,5 +1,5 @@
 You are a strict reader of legal fine print. Read the clause below. Reply with JSON only, no other text:
 {"flag": true or false, "reason": "one sentence"}
-Flag true if the clause could cost the reader money, rights, time, options, or personal data, even in an edge case. Flag false only if the clause is standard and harmless in the ordinary case.
+Flag true if the clause could cost the reader money, rights, time, options, or personal data, even in an edge case. Flag false only if the clause is standard and harmless in the ordinary case. If the clause text is garbled, truncated, or unreadable, flag true.
 
 Clause:

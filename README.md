@@ -1,20 +1,25 @@
 # Legal Lights
 
 Paste a legal document, or drop in a full PDF. Every clause gets a lamp:
-red costs you, amber watch it, green standard, white unclear and needs a
-human look. Reds first, then ambers, then white. Greens collapse.
-Every lamp carries one plain sentence, one action, and quoted wording
-from your document.
+red means genuinely harmful or unusual, amber means the readers
+disagreed and it is worth a look, green means standard or fine, white
+means unclear and needs a human look. Reds first, then ambers, then
+white. Greens collapse. Red and amber lamps carry one plain sentence,
+quoted wording, and an action only when something useful can be done.
+Green parts are counts only.
 
 ## The one thing
 
 A clause verdict unit. Input: one clause. Output: plain line, lamp,
-action, quote trace. Three passes, all Groq gpt-oss-20b on the $0 free
-tier: a strict reader, a generous reader, and an adjudicator who settles
-disagreements. Lamp rules live in code, not in the model: both flag is
-red, disagreement is amber, both clear is green, adjudicator says
-unjudgeable is white. The engine is this unit run over every clause,
-with lamps aggregated into the panel.
+action, quote trace. Two readers always run: a strict reader with a
+broad net, and a generous reader acting as a harsh filter that flags
+only genuinely harmful or unusual terms and never flags standard lease
+terms. An adjudicator settles flagged clauses only; when both readers
+clear a clause it goes green with no adjudicator call. Lamp rules live
+in code, not in the model: both flag is red, disagreement is amber,
+both clear is green, adjudicator says unjudgeable is white. All calls
+are Groq gpt-oss-20b on the $0 free tier. The engine is this unit run
+over every clause, with lamps aggregated into the panel.
 
 ## The app (new)
 
