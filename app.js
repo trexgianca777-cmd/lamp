@@ -1,4 +1,4 @@
-/* Legal Lights app. Document on the left, highlighted by lamp color.
+/* Lamp app. Document on the left, highlighted by lamp color.
    Detail card on the right. No framework, no build step. */
 const $ = id => document.getElementById(id);
 const LAMPS = {

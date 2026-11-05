@@ -1,6 +1,6 @@
-# BOOTSTRAP — Legal Lights, for a fresh Muse
+# BOOTSTRAP — Lamp, for a fresh Muse
 
-You are looking at Legal Lights: a fine-print demystifier. Paste a legal
+You are looking at Lamp: a fine-print demystifier. Paste a legal
 document or drop in a full PDF. Every clause gets a lamp: red costs you,
 amber watch it, green standard, white unclear. Click a highlight to see
 its plain meaning, one action, and quoted wording from the document.

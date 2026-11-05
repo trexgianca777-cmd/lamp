@@ -1,4 +1,4 @@
-# Legal Lights — 180-second demo script
+# Lamp — 180-second demo script
 
 0-25s (problem): "Everybody signs things they have not read. Leases, terms
 of service, fines. The fine print is where the money goes."

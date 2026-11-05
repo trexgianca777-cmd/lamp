@@ -1,4 +1,4 @@
-# Legal Lights
+# Lamp
 
 Paste a legal document, or drop in a full PDF. Every clause gets a lamp:
 red means genuinely harmful or unusual, amber means the readers

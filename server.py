@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Legal Lights demo server. Python standard library only.
+"""Lamp demo server. Python standard library only.
 
 Serves the project directory and two API routes that run the real pipeline:
   POST /api/verdict  {"clause": "..."} -> one verdict.json

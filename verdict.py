@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Legal Lights clause verdict unit. One clause in, one lamp out.
+"""Lamp clause verdict unit. One clause in, one lamp out.
 
 Passes (all Groq gpt-oss-20b on the $0 free tier, no Meta calls):
   1. strict reader    -> flag bool

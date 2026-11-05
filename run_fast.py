@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Fast Legal Lights document runner.
+"""Fast Lamp document runner.
 
 Same verdict semantics as verdict.py (3 passes, lamp rules in code,
 quote verified as exact substring). Faster than run_document.py:

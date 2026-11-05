@@ -1,19 +1,19 @@
-# Legal Lights — submission package
+# Lamp — submission package
 
 Copy-paste this into the hackathon submission form. Video file:
 `demo.mp4` (attached in chat, also in this repo root after push).
 
 ## Title
 
-Legal Lights
+Lamp
 
 ## Tagline
 
-Fine print, lit up.
+Demystify cryptic documents.
 
 ## Description
 
-Legal Lights reads a lease, terms of service, or ticket and lights up
+Lamp reads a lease, terms of service, or ticket and lights up
 the bad parts. Paste text or drop a PDF on one screen. Every clause
 gets a lamp: red means genuinely harmful or unusual, amber means the
 readers disagreed and it is worth a look, green means standard or
@@ -38,8 +38,8 @@ is labeled foundation, not event work.
 ## Links
 
 - Live product (UI; lamps need the live server):
-  https://trexgianca777-cmd.github.io/legal-lights/
-- Code (public repo): https://github.com/trexgianca777-cmd/legal-lights
+  https://trexgianca777-cmd.github.io/lamp/
+- Code (public repo): https://github.com/trexgianca777-cmd/lamp
 - Demo video: upload `demo.mp4` from this repo root.
 
 ## Try it
